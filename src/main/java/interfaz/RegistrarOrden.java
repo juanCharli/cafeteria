@@ -79,7 +79,6 @@ public class RegistrarOrden extends JFrame {
         add(new JScrollPane(tableOrden), BorderLayout.CENTER);
         
         JPanel panelBotones = new JPanel();
-        panelBotones.setLayout(new GridLayout(1, 3));
         
         JButton btnRegistrar = new JButton("Registrar Orden");
         panelBotones.add(btnRegistrar);
