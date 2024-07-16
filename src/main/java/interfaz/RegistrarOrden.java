@@ -34,6 +34,7 @@ public class RegistrarOrden extends JFrame {
     private OrdenTableModel tableModel;
     private Connection connection;
     private JLabel lblTotal;
+    private JRadioButton kinder;
     
     public RegistrarOrden() {
         setTitle("Registrar Orden");
@@ -68,6 +69,9 @@ public class RegistrarOrden extends JFrame {
         panelTop.add(new JLabel("Cantidad:"));
         txtCantidad = new JTextField();
         panelTop.add(txtCantidad);
+        
+        kinder = new JRadioButton("El alumno es de kinder");
+        panelTop.add(kinder);
         
         JButton btnAgregar = new JButton("Agregar a la Orden");
         panelTop.add(btnAgregar);
@@ -242,6 +246,7 @@ public class RegistrarOrden extends JFrame {
             cmbCategoria.setSelectedIndex(0);
             cmbProducto.setSelectedIndex(0);
             txtCantidad.setText("");
+            kinder.setSelected(false);
             
             JOptionPane.showMessageDialog(this, "Orden registrada con ID: " + ordenID);
         } catch (Exception e) {
