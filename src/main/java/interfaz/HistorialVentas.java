@@ -213,7 +213,7 @@ public class HistorialVentas extends JFrame {
         java.util.Date fechaFin = (java.util.Date) datePickerFin.getModel().getValue();
 
         try {
-            String query = "SELECT v.ventaID, o.fecha, a.nombre, i.nombre, c.nombre, i.tipo, v.cantidad, v.precio, (v.cantidad * v.precio) as total " +
+            String query = "SELECT v.ventaID, o.fecha, a.nombre, i.nombre, c.nombre, v.cantidad, v.precio, (v.cantidad * v.precio) as total " +
                     "FROM Ventas v " +
                     "JOIN Ordenes o ON v.ordenID = o.ordenID " +
                     "JOIN Alumnos a ON o.alumnoID = a.alumnoID " +
@@ -266,10 +266,9 @@ public class HistorialVentas extends JFrame {
                 row.add(rs.getString(3));
                 row.add(rs.getString(4));
                 row.add(rs.getString(5));
-                row.add(rs.getString(6));
-                row.add(rs.getInt(7));
+                row.add(rs.getInt(6));
+                row.add(rs.getBigDecimal(7));
                 row.add(rs.getBigDecimal(8));
-                row.add(rs.getBigDecimal(9));
                 tableModel.addRow(row);
             }
 
