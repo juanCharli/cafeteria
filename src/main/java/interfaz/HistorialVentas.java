@@ -106,7 +106,6 @@ public class HistorialVentas extends JFrame {
         tableModel.addColumn("Alumno");
         tableModel.addColumn("Item");
         tableModel.addColumn("Categoría");
-        tableModel.addColumn("Tipo");
         tableModel.addColumn("Cantidad");
         tableModel.addColumn("Precio Unitario");
         tableModel.addColumn("Total");
